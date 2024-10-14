@@ -24,4 +24,8 @@ class controllermain extends Controller
       public function indexsettings(){
         return view ('index-settings');   
       }
+    
+    public function tes(){
+      return view ('tes');   
+    }
 }
