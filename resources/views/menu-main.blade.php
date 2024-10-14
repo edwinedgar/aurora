@@ -54,7 +54,7 @@
     </a>
     <a href="#" class="close-menu">
         <i data-feather="x" data-feather-line="3" data-feather-size="16" data-feather-color="red2-dark" data-feather-bg="red2-fade-dark"></i>
-        <span>Keluar</span>
+        <span>Keluara</span>
         <i class="fa fa-circle"></i>
     </a>
 </div>
