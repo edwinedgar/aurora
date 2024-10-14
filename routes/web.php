@@ -13,7 +13,7 @@ Route::get('/index-components', [controllermain::class,'indexcomponents']);
 Route::get('/index-media', [controllermain::class,'indexmedia']);
 Route::get('/index-pages', [controllermain::class,'indexpages']);
 Route::get('/index-settings', [controllermain::class,'indexsettings']);
-Route::get('/tes', [controllermain::class,'tes']);
+Route::get('/tes', [ProfileController::class,'tes']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
