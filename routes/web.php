@@ -13,7 +13,7 @@ Route::get('/index-components', [controllermain::class,'indexcomponents']);
 Route::get('/index-media', [controllermain::class,'indexmedia']);
 Route::get('/index-pages', [controllermain::class,'indexpages']);
 Route::get('/index-settings', [controllermain::class,'indexsettings']);
-Route::get('/tes', [ProfileController::class,'tes']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -24,5 +24,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/tes', [ProfileController::class,'tes']);
 
 require __DIR__.'/auth.php';
