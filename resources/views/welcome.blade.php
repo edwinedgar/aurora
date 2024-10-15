@@ -32,11 +32,11 @@
     </div>
     <div id="footer-bar" class="footer-bar-5">
         
-        <a href="{{url('/index-components')}}"  class="{{ request()->is('index-components') ? 'active-nav' : '' }}"><i data-feather="heart" data-feather-line="1" data-feather-size="21" data-feather-color="red2-dark" data-feather-bg="red2-fade-light"></i><span>Features</span></a>
-        <a href="{{url('/index-media')}}"  class="{{ request()->is('index-media') ? 'active-nav' : '' }}"><i data-feather="image" data-feather-line="1" data-feather-size="21" data-feather-color="green1-dark" data-feather-bg="green1-fade-light"></i><span>Media</span></a>
-        <a href="{{url('/')}}" class="{{ request()->is('/') ? 'active-nav' : '' }}"><i data-feather="home" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span>Home</span></a>
-        <a href="{{url('/index-pages')}}"  class="{{ request()->is('index-pages') ? 'active-nav' : '' }}"><i data-feather="file" data-feather-line="1" data-feather-size="21" data-feather-color="brown1-dark" data-feather-bg="brown1-fade-light"></i><span>Pages</span></a>
-        <a href="{{url('/index-settings')}}"  class="{{ request()->is('index-settings') ? 'active-nav' : '' }}"><i data-feather="settings" data-feather-line="1" data-feather-size="21" data-feather-color="gray2-dark" data-feather-bg="gray2-fade-light"></i><span>Settings</span></a>
+        <a href="{{url('/index-components')}}"  class="{{ request()->is('index-components') ? 'active-nav' : '' }}"><i data-feather="heart" data-feather-line="1" data-feather-size="21" data-feather-color="red2-dark" data-feather-bg="red2-fade-light"></i><span>Layanan</span></a>
+        <a href="{{url('/index-media')}}"  class="{{ request()->is('index-media') ? 'active-nav' : '' }}"><i data-feather="image" data-feather-line="1" data-feather-size="21" data-feather-color="green1-dark" data-feather-bg="green1-fade-light"></i><span>Riwayat</span></a>
+        <a href="{{url('/')}}" class="{{ request()->is('/') ? 'active-nav' : '' }}"><i data-feather="home" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span>Beranda</span></a>
+        <a href="{{url('/index-pages')}}"  class="{{ request()->is('index-pages') ? 'active-nav' : '' }}"><i data-feather="file" data-feather-line="1" data-feather-size="21" data-feather-color="brown1-dark" data-feather-bg="brown1-fade-light"></i><span>Promo</span></a>
+        <a href="{{url('/index-settings')}}"  class="{{ request()->is('index-settings') ? 'active-nav' : '' }}"><i data-feather="settings" data-feather-line="1" data-feather-size="21" data-feather-color="gray2-dark" data-feather-bg="gray2-fade-light"></i><span>Kontak</span></a>
     </div>
     <div class="page-title page-title-large">
             <h2 data-username="Enabled!" class="greeting-text"></h2>
