@@ -1,52 +1,53 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+@extends('welcomelogin')
+@section('content')
+<form method="POST" action="{{ route('register') }}">
+@csrf
+<div class="page-title page-title-small">
+            <h2><a href="#" data-back-button><i class="fa fa-arrow-left"></i></a>Daftar</h2>           
+</div>
+        <div class="card header-card shape-rounded" data-card-height="150">
+            <div class="card-overlay bg-highlight opacity-95"></div>
+            <div class="card-overlay dark-mode-tint"></div>
+            <div class="card-bg preload-img" data-src="images/pictures/20s.jpg"></div>
         </div>
+        
+        <div class="card card-style">
+            <div class="content mb-0 mt-1">
+                <div class="input-style has-icon input-style-1 input-required">
+                    <i class="input-icon fa fa-user color-theme"></i>
+                    <span>Username</span>
+                    <em>(required)</em>
+                    <input type="name" placeholder="Username" name="name">
+                </div> 
+                <div class="input-style has-icon input-style-1 input-required">
+                    <i class="input-icon fa fa-at color-theme"></i>
+                    <span>Email</span>
+                    <em>(required)</em>
+                    <input type="email" placeholder="Email" name="email">
+                </div> 
+                <div class="input-style has-icon input-style-1 input-required">
+                    <i class="input-icon fa fa-lock color-theme"></i>
+                    <span>Password</span>
+                    <em>(required)</em>
+                    <input type="password" placeholder="Password" name="password">
+                </div> 
+                <div class="input-style has-icon input-style-1 input-required mb-4">
+                    <i class="input-icon fa fa-lock color-theme"></i>
+                    <span>Password</span>
+                    <em>(required)</em>
+                    <input type="password" placeholder="ulangi Password" name="password_confirmation">
+                </div> 
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                <button class="btn btn-m btn-full rounded-sm shadow-l bg-green1-dark text-uppercase font-900">Daftar</button>
+
+                <div class="divider"></div>
+
+                <p class="text-center">
+                    <a href="{{url('/login')}}" class="color-highlight opacity-80 font-12">Sudah Punya Akun? Masuk</a>
+                </p>
+
+            </div>
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</form>
+@endsection

@@ -1,1 +1,4 @@
-sssss
+@extends('welcome')
+@section('content')
+
+    @endsection  

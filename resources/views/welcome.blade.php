@@ -14,6 +14,7 @@
 <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
 <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
 <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+<link href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" rel="stylesheet">
 </head>
     
 <body class="theme-light" data-highlight="blue2">
@@ -95,5 +96,12 @@
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
+
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js" type="text/javascript"></script>
+<script>
+new DataTable('#example');
+</script>
+
+
 </body>
 

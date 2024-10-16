@@ -1,47 +1,46 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+@extends('welcomelogin')
+@section('content')
+<form method="POST" action="{{ route('login') }}">
+@csrf
+<div class="page-title page-title-small">
+            <h2><a href="#" data-back-button></a>Masuk</h2>
+          
+        </div>
+        <div class="card header-card shape-rounded" data-card-height="150">
+            <div class="card-overlay bg-highlight opacity-95"></div>
+            <div class="card-overlay dark-mode-tint"></div>
+            <div class="card-bg preload-img" data-src="images/pictures/20s.jpg"></div>
+        </div>
+        
+        <div class="card card-style">
+            <div class="content mt-2 mb-0">
+                <div class="input-style has-icon input-style-1 input-required pb-1">
+                    <i class="input-icon fa fa-user color-theme"></i>
+                    <span>Email</span>
+                    <em>(required)</em>
+                    <input type="email" placeholder="Email" name="email">
+                </div> 
+                <div class="input-style has-icon input-style-1 input-required pb-1">
+                    <i class="input-icon fa fa-lock color-theme"></i>
+                    <span>Password</span>
+                    <em>(required)</em>
+                    <input type="password" placeholder="Password" name="password">
+                </div> 
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                <button href="#" class="btn btn-m mt-2 mb-4 btn-full bg-green1-dark rounded-sm text-uppercase font-900 btn-block">Masuk</button>
+
+                <div class="divider"></div>
+
+            
+
+                <div class="d-flex">
+                    <div class="w-50 font-11 pb-2 color-theme opacity-60 pb-3 text-left"><a href="{{url('/register')}}" class="color-theme">Belum Punya Akun? Daftar</a></div>
+                    <div class="w-50 font-11 pb-2 color-theme opacity-60 pb-3 text-right"><a href="#" class="color-theme">Lupa Password</a></div>
+                </div>
+            </div>
+            
         </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</form>  
+@endsection

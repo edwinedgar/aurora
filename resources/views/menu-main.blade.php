@@ -47,9 +47,9 @@
         <a href="#"><i class="fa fa-phone color-green1-dark font-16 opacity-50"></i><span>Phone</span><i class="fa fa-circle"></i></a>
         <a href="#"><i class="fab fa-whatsapp color-whatsapp font-16 opacity-30"></i><span>WhatsApp</span><i class="fa fa-circle"></i></a>
     </div>
-    <a id="nav-settings" href="settings.html">
+    <a id="nav-settings" href="{{ route('inputlayanan') }}">
         <i data-feather="settings" data-feather-line="1" data-feather-size="16" data-feather-color="gray2-dark" data-feather-bg="gray2-fade-dark"></i>
-        <span>Settings</span>
+        <span>Master Layanan</span>
         <i class="fa fa-circle"></i>
     </a>
     <a href="#" class="close-menu">
