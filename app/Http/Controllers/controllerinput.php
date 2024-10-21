@@ -8,6 +8,7 @@ use App\Models\dbdaftar;
 use App\Models\dbpasien;
 use App\Models\dbpetugas;
 use Session;
+use Auth;
 
 
 
@@ -273,6 +274,10 @@ return redirect(session('previous-url'));
     }
     public function mlaporanpetugas(){
         return view('mlaporanpetugas');
+    }
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/');
     }
     
 }

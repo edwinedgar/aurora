@@ -5,17 +5,22 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controllermain;
 use App\Http\Controllers\controllerinput;
 
+Route::middleware('auth','Pengguna')->group(function(){
+
+});
+Route::middleware('auth','admin,pengguna')->group(function(){
+
+});
+Route::middleware('auth','Petugas')->group(function(){
+
+});
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/', function () {
-    return view('index');
-})->middleware(['auth', 'verified'])->name('index');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/', function () {return view('index');})->name('index');
+    Route::get('//dashboard', function () {return view('dashboard');})->name('dashboard');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -52,7 +57,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/hapuspasien1/{id}', [controllerinput::class,'hapuspasien1'])->name('hapuspasien1');
     Route::get('/meditpasien/{id}', [controllerinput::class,'meditpasien'])->name('meditpasien');
     Route::put('/meditpasien1/{id}', [controllerinput::class,'meditpasien1'])->name('meditpasien1');
-
+    Route::get('/logout', [controllerinput::class, 'logout'])->name('logout');
 
 
     

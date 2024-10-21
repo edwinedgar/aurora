@@ -42,12 +42,12 @@
                 <h4 class="pl-2">{{$pasien->nama_pasien}}</h4>
                
             </div>
-            <a/>
-         <a href="{{ url('meditpasien/'.$pasien->id) }}">
+</a>
+    
             <div class="card-center">
-                <i class="fas fa-edit float-right color-theme pr-4 "> Edit</i>
+              <a href="{{ url('meditpasien/'.$pasien->id) }}">  <i class="fas fa-edit float-right color-theme pr-4 "> Edit</i></a>
             </div>
-        </a>
+      
 
 </div>
 @endforeach
