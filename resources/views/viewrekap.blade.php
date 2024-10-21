@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="page-title page-title-small">
-            <h2><a href="#" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
+            <h2><a href="{{ url()->previous() }}" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
            
         </div>
         
@@ -107,12 +107,13 @@
       
 
         
-        <div id="footer-bar" class="footer-bar-5" style="background-color: #4A89DC" >
+        <div id="footer-bar" class="footer-bar-5" style="background-color: #D770AD" >
 
 <a href="{{route('hasilrekap')}}" class="color-white pt-3 font-900 text-uppercase"><h2 class="color-white">Pesan sekarang</h2></a>
 
 
 </div>      
+
 
 
 @endsection

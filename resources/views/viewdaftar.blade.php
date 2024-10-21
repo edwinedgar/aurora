@@ -3,7 +3,7 @@
 <form action="{{ route('postrekap') }}" method="POST" enctype="multipart/form-data">
 @csrf
 <div class="page-title page-title-small">
-            <h2><a href="#" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
+            <h2><a href="{{ url()->previous() }}" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
            
         </div>
         
@@ -75,9 +75,11 @@
 <div id="footer-bar"  >
 
 
-<button href="#" class="btn btn-m mt-2 mb-4 btn-full bg-green1-dark rounded-sm text-uppercase font-900 btn-block">selanjutnya</button>
+<button href="#" class="btn btn-m mt-2 mb-4 btn-full bg-pink1-dark rounded-sm text-uppercase font-900 btn-block">selanjutnya</button>
 
-</div>         
+</div> 
+
+        
        
 </form>
 

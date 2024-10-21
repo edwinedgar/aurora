@@ -2,7 +2,7 @@
 @section('content')
       
 <div class="page-title page-title-small">
-            <h2><a href="#" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
+            <h2><a href="{{ url()->previous() }}" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
            
         </div>
         
@@ -34,7 +34,9 @@
                 <h4 class="pl-2">{{$petugas1->kategori_petugas}} {{$petugas1->nama_petugas}}</h4>
                 <p class="pl-2 mt-n2 font-12 color-highlight mb-0">{{$petugas1->jeniskelamin_petugas}}</p>
             </div>
-         
+            <div class="card-center">
+                <i class=" float-right color-theme pr-4 "> <input id="box3-fac-radio" type="radio" value="" name="id_layanan" value="1"></i>
+            </div>
        
 </a>
 
@@ -46,12 +48,21 @@
 
         
 
-<div id="footer-bar" class="footer-bar-5" style="background-color: #4A89DC" >
+<div id="footer-bar" class="footer-bar-5" style="background-color: #D770AD" >
 
-<a href="" class="color-white pt-3 font-900 text-uppercase"><h2 class="color-white">Selanjutnya</h2></a>
+<a href="" data-toast="notification-1"  class="color-white pt-3 font-900 text-uppercase"><h2 class="color-white">Selanjutnya</h2></a>
 
 
-</div>       
+</div>  
+
+<div id="notification-1" data-dismiss="notification-1" data-delay="3000" data-autohide="true" class="notification notification-ios bg-dark1-dark">
+      
+<span class="notification-icon">
+            <i class="fa fa-bell"></i>
+            <em>Silahkan pilih petugas kesehatan</em>
+            <i data-dismiss="notification-1" class="fa fa-times-circle"></i>
+        </span>
+    </div>
 
 
 @endsection

@@ -2,7 +2,7 @@
 @section('content')
       
 <div class="page-title page-title-small">
-            <h2><a href="#" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
+            <h2><a href="/" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
            
         </div>
         
@@ -33,7 +33,7 @@
             </div>
          
             <div class="card-center">
-                <i class=" float-right color-theme pr-4 "> <input id="box3-fac-radio" type="radio" value="{{$kategori->id}}" name="id_layanan" value="1"></i>
+                <i class=" float-right color-theme pr-4 "> <input id="box3-fac-radio" type="radio" value="" name="id_layanan" value="1"></i>
             </div>
 </a>
 
@@ -44,13 +44,21 @@
       
 
         
-<div id="footer-bar"  >
+<div id="footer-bar" class="footer-bar-5" style="background-color: #D770AD" >
 
+<a href="" data-toast="notification-1" class="color-white pt-3 font-900 text-uppercase"><h2 class="color-white">Selanjutnya</h2></a>
 
-<button href="#" class="btn btn-m mt-2 mb-4 btn-full bg-green1-dark rounded-sm text-uppercase font-900 btn-block">selanjutnya</button>
 
 </div>  
 
-
+<div id="notification-1" data-dismiss="notification-1" data-delay="3000" data-autohide="true" class="notification notification-ios bg-dark1-dark">
+      
+<span class="notification-icon">
+            <i class="fa fa-bell"></i>
+            <em>Silahkan Pilih Jenis Layanan</em>
+            <i data-dismiss="notification-1" class="fa fa-times-circle"></i>
+        </span>
+    </div>  
+   
 @endsection
 

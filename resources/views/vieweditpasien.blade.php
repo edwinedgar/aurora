@@ -4,7 +4,7 @@
 {{ csrf_field() }}
 {{ method_field('put') }}
 <div class="page-title page-title-small">
-            <h2><a href="#" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
+            <h2><a href="{{ url()->previous() }}" data-back-button><i class="fa fa-arrow-left"></i></a>Kembali</h2>
            
         </div>
         
@@ -57,7 +57,7 @@
               
                
 
-                <button href="#" class="btn btn-m mt-2 mb-4 btn-full bg-green1-dark rounded-sm text-uppercase font-900 btn-block">simpan</button>
+                <button href="#" class="btn btn-m mt-2 mb-4 btn-full bg-pink1-dark rounded-sm text-uppercase font-900 btn-block">simpan</button>
                 
             </div>
         </div>

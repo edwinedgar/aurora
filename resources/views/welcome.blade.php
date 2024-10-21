@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
 <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
-<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="app/icons/5s.png">
 <link href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" rel="stylesheet">
 </head>
     
@@ -35,7 +35,7 @@
         
         <!-- <a href="{{url('/index-components')}}"  class="{{ request()->is('index-components') ? 'active-nav' : '' }}"><i data-feather="heart" data-feather-line="1" data-feather-size="21" data-feather-color="red2-dark" data-feather-bg="red2-fade-light"></i><span>Layanan</span></a> -->
         <a href="{{url('/')}}" class="{{ request()->is('/') ? 'active-nav' : '' }}"><i data-feather="home" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span>Beranda</span></a>
-        <a href="{{url('/mhistorypasien')}}"  class="{{ request()->is('mhistorypasien') ? 'active-nav' : '' }}"><i data-feather="shopping-cart" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span>Pesanan</span></a>
+      <a href="{{url('/mhistorypasien')}}"  class="{{ request()->is('mhistorypasien') ? 'active-nav' : '' }} "><i data-feather="shopping-cart" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light" class=""> </i> <i><em class="badge bg-pink1-dark">3</em></i><span>Pesanan</span></a>
        
         <a href="{{url('/index-pages')}}"  class="{{ request()->is('index-pages') ? 'active-nav' : '' }}"><i data-feather="help-circle" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span>Info</span></a>
         <a href="{{url('/index-settings')}}"  class="{{ request()->is('index-settings') ? 'active-nav' : '' }}"><i data-feather="user" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span>Kontak</span></a>
