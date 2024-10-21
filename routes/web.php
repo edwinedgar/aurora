@@ -28,6 +28,37 @@ Route::middleware('auth')->group(function () {
     Route::get('/minputlayanan', [controllerinput::class,'inputlayanan'])->name('inputlayanan');
     Route::get('/mhapuslayanan/{id}',[controllerinput::class,'layananhapus']);
     Route::post('/simpanlayanan', [controllerinput::class,'simpanlayanan'])->name('simpanlayanan');
+    Route::get('/mdaftarlayanan', [controllerinput::class,'daftarlayanan'])->name('daftarlayanan');
+    Route::get('/mpasien/{jenislayanan}', [controllerinput::class,'pasien'])->name('pasien');
+    Route::get('/mdaftar/{daftarpasien}', [controllerinput::class,'daftar'])->name('daftar');
+    Route::get('/mlayanan/{layanan}', [controllerinput::class,'layanan'])->name('layanan');
+    Route::post('/mpasien/{jenislayanan}', [controllerinput::class,'postlayanan'])->name('postlayanan');
+    Route::get('/mrekap', [controllerinput::class,'rekap'])->name('rekap');
+    Route::post('/postmrekap', [controllerinput::class,'postrekap'])->name('postrekap');
+    Route::get('/hasilrekap', [controllerinput::class,'hasilrekap'])->name('hasilrekap');
+    Route::get('/mpilihpetugas', [controllerinput::class,'pilihpetugas'])->name('pilihpetugas');
+    Route::get('/mpilihpetugas1/{petugas}', [controllerinput::class,'pilihpetugas1'])->name('pilihpetugas1');
+    Route::get('/minputpetugas', [controllerinput::class,'minputpetugas'])->name('minputpetugas');
+    Route::post('/simpanpetugas', [controllerinput::class,'simpanpetugas'])->name('simpanpetugas');
+    Route::get('/hapuspetugas/{id}', [controllerinput::class,'hapuspetugas'])->name('hapuspetugas');
+    Route::get('/meditpetugas', [controllerinput::class,'meditpetugas'])->name('meditpetugas');
+    Route::get('/mlaporanpetugas', [controllerinput::class,'mlaporanpetugas'])->name('mlaporanpetugas');
+    Route::get('/mhistorypasien', [controllerinput::class,'mhistorypasien'])->name('mhistorypasien');
+    Route::get('/minputpasien', [controllerinput::class,'minputpasien'])->name('minputpasien');
+    Route::post('/simpanpasien', [controllerinput::class,'simpanpasien'])->name('simpanpasien');
+    Route::get('/hapuspasien/{id}', [controllerinput::class,'hapuspasien'])->name('hapuspasien');
+    Route::get('/minputpasien1', [controllerinput::class,'minputpasien1'])->name('minputpasien1');
+    Route::post('/simpanpasien1', [controllerinput::class,'simpanpasien1'])->name('simpanpasien1');
+    Route::get('/hapuspasien1/{id}', [controllerinput::class,'hapuspasien1'])->name('hapuspasien1');
+    Route::get('/meditpasien/{id}', [controllerinput::class,'meditpasien'])->name('meditpasien');
+    Route::put('/meditpasien1/{id}', [controllerinput::class,'meditpasien1'])->name('meditpasien1');
+
+
+
+    
+
+
+
     
 });
 Route::middleware('auth','pengguna')->group(function () {

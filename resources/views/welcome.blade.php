@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-<title>Azures BootStrap</title>
+<title>Aurora | Home Care</title>
 <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet">
@@ -24,23 +24,24 @@
 <div id="page">
     
     <!-- header and footer bar go here-->
-    <div class="header header-fixed header-auto-show header-logo-app">
+    <!-- <div class="header header-fixed header-auto-show header-logo-app">
         <a href="/" class="header-title">AURORA</a>
         <a href="#" data-menu="menu-main" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
         <a href="#" data-toggle-theme class="header-icon header-icon-2 show-on-theme-dark"><i class="fas fa-sun"></i></a>
         <a href="#" data-toggle-theme class="header-icon header-icon-2 show-on-theme-light"><i class="fas fa-moon"></i></a>
-        <!-- <a href="#" data-menu="menu-highlights" class="header-icon header-icon-3"><i class="fas fa-brush"></i></a> -->
-    </div>
+        <!-- <a href="#" data-menu="menu-highlights" class="header-icon header-icon-3"><i class="fas fa-brush"></i></a> 
+    </div>-->
     <div id="footer-bar" class="footer-bar-5">
         
-        <a href="{{url('/index-components')}}"  class="{{ request()->is('index-components') ? 'active-nav' : '' }}"><i data-feather="heart" data-feather-line="1" data-feather-size="21" data-feather-color="red2-dark" data-feather-bg="red2-fade-light"></i><span>Layanan</span></a>
-        <a href="{{url('/index-media')}}"  class="{{ request()->is('index-media') ? 'active-nav' : '' }}"><i data-feather="image" data-feather-line="1" data-feather-size="21" data-feather-color="green1-dark" data-feather-bg="green1-fade-light"></i><span>Riwayat</span></a>
+        <!-- <a href="{{url('/index-components')}}"  class="{{ request()->is('index-components') ? 'active-nav' : '' }}"><i data-feather="heart" data-feather-line="1" data-feather-size="21" data-feather-color="red2-dark" data-feather-bg="red2-fade-light"></i><span>Layanan</span></a> -->
         <a href="{{url('/')}}" class="{{ request()->is('/') ? 'active-nav' : '' }}"><i data-feather="home" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span>Beranda</span></a>
-        <a href="{{url('/index-pages')}}"  class="{{ request()->is('index-pages') ? 'active-nav' : '' }}"><i data-feather="file" data-feather-line="1" data-feather-size="21" data-feather-color="brown1-dark" data-feather-bg="brown1-fade-light"></i><span>Promo</span></a>
-        <a href="{{url('/index-settings')}}"  class="{{ request()->is('index-settings') ? 'active-nav' : '' }}"><i data-feather="settings" data-feather-line="1" data-feather-size="21" data-feather-color="gray2-dark" data-feather-bg="gray2-fade-light"></i><span>Kontak</span></a>
+        <a href="{{url('/mhistorypasien')}}"  class="{{ request()->is('mhistorypasien') ? 'active-nav' : '' }}"><i data-feather="shopping-cart" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span>Pesanan</span></a>
+       
+        <a href="{{url('/index-pages')}}"  class="{{ request()->is('index-pages') ? 'active-nav' : '' }}"><i data-feather="help-circle" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span>Info</span></a>
+        <a href="{{url('/index-settings')}}"  class="{{ request()->is('index-settings') ? 'active-nav' : '' }}"><i data-feather="user" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span>Kontak</span></a>
     </div>
     <div class="page-title page-title-large">
-            <h2 data-username="Enabled!" class="greeting-text"></h2>
+            <h2 data-username="{{ Auth::user()->name }}" class="greeting-text"></h2>
             <a href="#" data-menu="menu-main" class="bg-fade-gray1-dark shadow-xl preload-img" data-src="images/avatars/5s.png"></a>
         </div>
         <div class="card header-card shape-rounded" data-card-height="210">
