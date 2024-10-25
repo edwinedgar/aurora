@@ -16,7 +16,7 @@
         
         <div class="card card-style">
             <div class="content">
-                <h3>Edwin</h3>
+                <h3>{{$rekap->nama_pasien}}</h3>
                
                 <div class="d-flex pb-2">
                     <div class="mr-auto">
@@ -27,18 +27,18 @@
                     <table>    
                         <tr>
                             <td>Tanggal Lahir</td>
-                            <td>01-01-1990</td>
+                            <td>{{$rekap->tanggallahir_pasien}}</td>
                         </tr>
                         <tr>
                             <td>Keluhan</td>
-                            <td>Baik</td>
+                            <td>{{$rekap->keluhan_pasien}}</td>
                         </tr>
                         <tr>
                             <td>Alamat</td>
-                            <td>Besuki</td>
+                            <td>{{$rekap->alamat_pasien}}</td>
                         </tr>
                     </table>
-                        <h5 class="font-14 font-600 opacity-80 pb-2">Patikan data diri anda benar</h5>
+                        <h5 class="font-14 font-600 opacity-80 pb-2">Pastikan data diri anda benar</h5>
                         <div class="clearfix"></div>
                         
                        
@@ -78,11 +78,11 @@
                     <div class="content">
                         <div class="row mb-0">
                            
-                            <div class="col-6 text-left"><h6 class="font-600">nama Paket</h6></div>
-                            <div class="col-6 text-right"><h6 class="font-600 color-green1-dark">$0<sup>.00</sup></h6></div>
+                            <div class="col-6 text-left"><h6 class="font-600">{{$rekap->layanan_pasien}}</h6></div>
+                            <div class="col-6 text-right"><h6 class="font-600 color-green1-dark">{{$rekap->tarif_pasien}}</h6></div>
                             <div class="col-12"><div class="divider mt-3"></div></div>
                             <div class="col-6 text-left"><h4>Total Pembayaran</h4></div>
-                            <div class="col-6 text-right"><h4>$2133<sup>.98</sup></h4></div>
+                            <div class="col-6 text-right"><h4>{{$rekap->tarif_pasien}}</h4></div>
                         </div>
 
                         <div class="divider mt-4"></div>

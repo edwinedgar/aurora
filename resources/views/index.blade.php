@@ -38,7 +38,20 @@
             </div>
         </div>
 
-       
+@if(Auth::user()->role == 'petugas')      
+        <div class="card card-style">
+            <div class="content">
+         <div class="row">
+            <div class="col-6">
+                    <a href="{{route('statuspetugas')}}" class="btn btn-full btn-border btn-m rounded-s text-uppercase font-900 shadow-l border-highlight color-highlight">Status Petugas</a>
+                </div>
+                <div class="col-6">
+                    <a href="{{route('statuspetugas')}}" class="btn btn-full btn-m rounded-s text-uppercase font-900 shadow-xl bg-highlight"> <i><em class="badge bg-pink1-dark">3</em></i>Pesanan Petugas</a>
+                </div>
+                </div>         
+            </div>
+        </div>
+@endif
 
       
             <div class="content mb-0">

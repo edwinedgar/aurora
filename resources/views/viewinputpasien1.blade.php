@@ -12,11 +12,7 @@
                       
      
 
-                <div class="input-style input-style-2 input-required">
-                    <span class="color-highlight">ID Pasien</span>
-                    <em>(required)</em>
-                    <input class="form-control" type="text" placeholder=""  name="id_user">
-                </div>  
+                 
 
                 <div class="input-style input-style-2 input-required">
                     <span class="color-highlight">Nama</span>

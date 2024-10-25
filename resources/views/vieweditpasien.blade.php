@@ -18,10 +18,7 @@
                       
      
 
-                <div class="input-style input-style-2 input-required">
-                   
-                    <input class="form-control" type="text" placeholder=""  name="id_user" value="{{$pasienedit->id_user}}" disabled>
-                </div>  
+                
                 <label for="">Nama</label>
                 <div class="input-style input-style-2 input-required">
                

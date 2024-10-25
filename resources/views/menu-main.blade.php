@@ -18,14 +18,15 @@
       
         <i class="fa fa-circle"></i>
     </a>
-    <a id="nav-starters" href="pages-starters-list.html">
-        <i data-feather="star" data-feather-line="1" data-feather-size="18" data-feather-color="yellow1-dark" data-feather-bg="yellow1-fade-dark"></i>
-        <span>Tambah Pasien</span>
+
+  
+@if(Auth::user()->role == 'admin')  
+    <a id="#" href="{{ route('minputpasien') }}">
+        <i data-feather="settings" data-feather-line="1" data-feather-size="16" data-feather-color="gray2-dark" data-feather-bg="gray2-fade-dark"></i>
+        <span>Master Pasien</span>
         <i class="fa fa-circle"></i>
     </a>
-  
-
-    <a id="nav-settings" href="{{ route('minputpetugas') }}">
+    <a id="#" href="{{ route('minputpetugas') }}">
         <i data-feather="settings" data-feather-line="1" data-feather-size="16" data-feather-color="gray2-dark" data-feather-bg="gray2-fade-dark"></i>
         <span>Master Petugas</span>
         <i class="fa fa-circle"></i>
@@ -36,6 +37,7 @@
         <span>Master Layanan</span>
         <i class="fa fa-circle"></i>
     </a>
+@endif
     <a href="{{ route('logout') }}" class="close-menu">
         <i data-feather="x" data-feather-line="3" data-feather-size="16" data-feather-color="red2-dark" data-feather-bg="red2-fade-dark"></i>
         <span>Keluar</span>

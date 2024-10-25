@@ -65,6 +65,8 @@ class controllerinput extends Controller
         return redirect('/minputpasien'); 
     }
     public function simpanpasien(Request $request){
+
+
         $pasien=dbpasien::create([ 
             'id_user'=>$request->id_user,
             'nama_pasien'=>$request->nama_pasien,
@@ -88,9 +90,10 @@ class controllerinput extends Controller
         return redirect('/mpasien'); 
     }
     public function simpanpasien1(Request $request){
-       
+       $iduser=Auth::user()->id;
+
         $pasien=dbpasien::create([ 
-            'id_user'=>$request->id_user,
+            'id_user'=>$iduser,
             'nama_pasien'=>$request->nama_pasien,
             'nik_pasien'=>$request->nik_pasien,
             'tanggal_lahir'=>$request->tanggal_lahir,
@@ -191,18 +194,18 @@ class controllerinput extends Controller
         return redirect('/mpasien');
     }
     public function rekap(){
+        $rekap=Session::get('product');
 
-
-        return view('viewrekap');
+        return view('viewrekap',['rekap'=>$rekap]);
     }
     public function postrekap(Request $request){
         
         $product = $request->Session()->get('product');
-       
+            $iduser=Auth::user()->id;
             $keluhan=$request->keluhan_pasien;
             $alamat=$request->alamat_pasien;
             
-            $product->fill(['keluhan_pasien' => $keluhan,'alamat_pasien' => $alamat,'statuspembayaran_pasien'=>'unpair']);
+            $product->fill(['keluhan_pasien' => $keluhan,'alamat_pasien' => $alamat,'statuspembayaran_pasien'=>'unpair','id_user' => $iduser]);
            
            
         $request->Session()->put('product',$product);
@@ -248,8 +251,8 @@ return redirect(session('previous-url'));
     }
     public function pilihpetugas(){
         $kategori=Session::get('kategori');
-        $petugas=dbpetugas::where('kategori_petugas',$kategori)->get();
-
+        $petugas=dbpetugas::where('kategori_petugas',$kategori)->where('status_petugas','0')->get();
+         
         return view('pilihpetugas',['petugas'=>$petugas]);
     }
     public function pilihpetugas1 (Request $request,$petugas){
@@ -279,5 +282,39 @@ return redirect(session('previous-url'));
         Auth::logout();
         return redirect('/');
     }
+    public function ubahstatus(){
+        $userpetugas=Auth::user()->id;
+        $cariid=dbpetugas::where('id_petugas',$userpetugas)->first();
+      
+       
+        $status1 = $cariid->id;
+        $status2 = $cariid->status_petugas;
     
+        
+       if ($status2==1) {
+        $pasienedit=dbpetugas::find($status1);
+      
+        $pasienedit->status_petugas='0';
+     
+        $pasienedit->update();
+       }
+       if ($status2==0) {
+        $pasienedit1=dbpetugas::find($status1);
+        $pasienedit1->status_petugas='1';
+     
+        $pasienedit1->update();
+       }
+
+       
+       return redirect()->back();
+       
+
+        }
+        public function statuspetugas(){
+            $petugas=Auth::user()->id;
+           
+            $status=dbpetugas::where('id_petugas',$petugas)->first();  
+          
+            return view ('viewstatuspetugas',['status'=>$status]);
+        }
 }
